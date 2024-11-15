@@ -3,14 +3,10 @@ AS = nasm
 LD = ld
 NASM_FLAGS = -f elf32
 LD_FLAGS = -m elf_i386
-OBJ_FILES = functions.o main.o
-
-# Calea către fișierele sursă
-SRC_DIR = src
-OBJ_DIR = obj
+OBJ_FILES = functions.o TicTacToe.o
 
 # Numele executabilului final
-EXEC = tiny_shell
+EXEC = tictactoe
 
 # Regula implicită pentru a construi executabilul
 all: $(EXEC)

@@ -40,7 +40,7 @@ _check_win:
 
     xor ecx, ecx
     .loop_draw:
-        cmp [table, ecx], 0x5F
+        cmp byte [table, ecx], 0x5F
         je .exit_draw
 
         inc ecx
@@ -51,7 +51,7 @@ _check_win:
     call string.PrintEndl
     call _start.exit
 
-    .exit_draw
+    .exit_draw:
 
     mov esp, ebp
     pop ebp
